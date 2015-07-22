@@ -19,8 +19,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         
+        // Start spinner
         activityIndicator.startAnimating()
         
+        // Create location manager & ask for permission
         self.locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
         self.locationManager.delegate = self
@@ -33,11 +35,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+        // Get altitude
         let alt = newLocation.altitude
-        //print("\(alt)")
-        labelAltitude.text = String(Int(alt)) + "m"
-        manager.stopUpdatingLocation()
+        // Display altitude
         activityIndicator.stopAnimating()
+        labelAltitude.text = String(Int(alt)) + "m"
+        // Stop location service
+        manager.stopUpdatingLocation()
     }
     
     @IBAction func buttonTapToRefresh(sender: AnyObject) {
