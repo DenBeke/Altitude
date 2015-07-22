@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Altitude" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3XL-Cp-F1I">
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfr-yp-Knj">
+                                <rect key="frame" x="252" y="562" width="96" height="30"/>
+                                <state key="normal" title="Tap to refresh">
+                                    <color key="titleColor" red="0.96929827514399636" green="0.99056692122506895" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapToRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1z-bV-VsH"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K6h-gq-dAN">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8T-41-cXL">
+                                <rect key="frame" x="209" y="271" width="183" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyZ-lR-bqK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <action selector="buttonTapToRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MA1-uO-IgU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rfr-yp-Knj" secondAttribute="bottom" constant="8" id="1we-dM-BoL"/>
+                            <constraint firstItem="CyZ-lR-bqK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="DDa-wc-MIl"/>
+                            <constraint firstItem="Rfr-yp-Knj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jv8-2R-gUB"/>
+                            <constraint firstItem="CyZ-lR-bqK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="KHj-EK-HKe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CyZ-lR-bqK" secondAttribute="trailing" constant="-20" id="KSx-0Z-hJh"/>
+                            <constraint firstItem="3XL-Cp-F1I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Pgf-4m-6Ol"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CyZ-lR-bqK" secondAttribute="bottom" id="Td1-Ap-BR2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3XL-Cp-F1I" secondAttribute="bottom" id="TxD-RX-tEf"/>
+                            <constraint firstItem="K6h-gq-dAN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WIo-Iq-fqQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3XL-Cp-F1I" secondAttribute="trailing" constant="-20" id="Wnb-uo-65p"/>
+                            <constraint firstItem="Q8T-41-cXL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XIa-Kw-F9d"/>
+                            <constraint firstItem="Q8T-41-cXL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z50-36-ByU"/>
+                            <constraint firstItem="3XL-Cp-F1I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="dPM-eI-jdU"/>
+                            <constraint firstItem="K6h-gq-dAN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xV4-Kl-rUQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="K6h-gq-dAN" id="68f-aj-kKt"/>
+                        <outlet property="labelAltitude" destination="Q8T-41-cXL" id="sa0-GW-3ak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mountain2.png" width="1909" height="1397"/>
+    </resources>
 </document>

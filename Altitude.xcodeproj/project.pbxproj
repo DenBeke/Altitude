@@ -12,6 +12,7 @@
 		C7866DDF1B5FFB60008094E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7866DDD1B5FFB60008094E2 /* Main.storyboard */; };
 		C7866DE11B5FFB60008094E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7866DE01B5FFB60008094E2 /* Assets.xcassets */; };
 		C7866DE41B5FFB60008094E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7866DE21B5FFB60008094E2 /* LaunchScreen.storyboard */; };
+		C7866DF21B601673008094E2 /* mountain2.png in Resources */ = {isa = PBXBuildFile; fileRef = C7866DF11B601673008094E2 /* mountain2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C7866DE01B5FFB60008094E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7866DE31B5FFB60008094E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7866DE51B5FFB60008094E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7866DF11B601673008094E2 /* mountain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountain2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		C7866DD81B5FFB60008094E2 /* Altitude */ = {
 			isa = PBXGroup;
 			children = (
+				C7866DF11B601673008094E2 /* mountain2.png */,
 				C7866DD91B5FFB60008094E2 /* AppDelegate.swift */,
 				C7866DDB1B5FFB60008094E2 /* ViewController.swift */,
 				C7866DDD1B5FFB60008094E2 /* Main.storyboard */,
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					C7866DD51B5FFB60008094E2 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 2H55825CLX;
 					};
 				};
 			};
@@ -122,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7866DE41B5FFB60008094E2 /* LaunchScreen.storyboard in Resources */,
+				C7866DF21B601673008094E2 /* mountain2.png in Resources */,
 				C7866DE11B5FFB60008094E2 /* Assets.xcassets in Resources */,
 				C7866DDF1B5FFB60008094E2 /* Main.storyboard in Resources */,
 			);
@@ -248,10 +253,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Altitude/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = denbeke.Altitude;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -259,10 +268,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Altitude/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = denbeke.Altitude;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
